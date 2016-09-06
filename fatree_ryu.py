@@ -7,6 +7,7 @@ from mininet.log import setLogLevel, info
 from mininet.link import Link, Intf, TCLink
 from mininet.topo import Topo
 from mininet.util import dumpNodeConnections
+from functools import partial
 import logging
 import os
 
