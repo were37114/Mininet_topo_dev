@@ -146,7 +146,8 @@ def createTopo(pod, density, ip="192.168.56.103", port=6633, bw_c2a=0.2, bw_a2e=
     logging.debug("LV1 Start Mininet")
     CONTROLLER_IP = ip
     CONTROLLER_PORT = port
-    net = Mininet(topo=topo, link=TCLink, controller=None, autoSetMacs=True,
+    switch = partial( OVSSwitch, protocols='OpenFlow13' )
+    net = Mininet(topo=topo, switch=switch, link=TCLink, controller=None, autoSetMacs=True,
                   autoStaticArp=True)
     net.addController(
         'controller', controller=RemoteController,
