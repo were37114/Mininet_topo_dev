@@ -19,20 +19,20 @@ from mininet.util import dumpNodeConnections
 import logging
 import os
 import subprocess
-from subprocess import Popen, PIPE
-from time import sleep, time
+#from subprocess import Popen, PIPE
+#from time import sleep, time
 from multiprocessing import Process
-import termcolor as T
+#import termcolor as T
 from argparse import ArgumentParser
 import sys
-from util.monitor import monitor_qlen
-from util.helper import stdev
+#from util.monitor import monitor_qlen
+#from util.helper import stdev
 
-
+'''
 logging.basicConfig(filename='./DCell.log', level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-
+'''
+'''
 def cprint(s, color, cr=True):
     """Print in color
        s: string to print
@@ -41,25 +41,25 @@ def cprint(s, color, cr=True):
         print T.colored(s, color)
     else:
         print T.colored(s, color),
-
+'''
 
 # Parse arguments
 
-parser = ArgumentParser(description="Buffer sizing tests")
+parser = ArgumentParser(description="tests")
 parser.add_argument('--levels',
                     '-l',
                     dest="levels",
                     type=int,
                     action="store",
                     help="Number of DCell levels",
-                    required=True)
+                    required=False)
 
 parser.add_argument('-n',
                     dest="n",
                     action="store",
                     type=int,
                     help="Number of servers in a level 0 DCell",
-                    required=True)
+                    required=False)
 # Expt parameters
 args = parser.parse_args()
 
