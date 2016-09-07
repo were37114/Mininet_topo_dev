@@ -131,7 +131,7 @@ class DCellTopo(Topo):
 
 
 
-def main(ip="192.168.56.104", port=6653):
+def main(ip="192.168.56.103", port=6633):
     topo = DCellTopo(n=args.n, levels=args.levels)
     CONTROLLER_IP = ip
     CONTROLLER_PORT = port
