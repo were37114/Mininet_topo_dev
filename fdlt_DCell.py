@@ -150,10 +150,12 @@ def main():
     sleep(3)
     print "DONE SLEEPING"
 '''
+'''
     h1 = net.getNodeByName("h-1")
     h2 = net.getNodeByName("h-2")
     h5 = net.getNodeByName("h-5")
     h20 = net.getNodeByName("h-20")
+'''
     '''
     print h1.cmd('ping -c1', h2.IP())
     print h1.cmd('ping -c1', h5.IP())
