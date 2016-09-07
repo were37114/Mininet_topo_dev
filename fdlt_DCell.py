@@ -142,6 +142,9 @@ def main(ip="192.168.56.104", port=6653):
     net.start()
     
     dumpNodeConnections(net.hosts)
+    CLI(net)
+    net.stop()
+    
 '''
     print "SLEEPING 3 SEC"
     sleep(3)
@@ -164,7 +167,7 @@ def main(ip="192.168.56.104", port=6653):
     net.iperf(hosts=(h1,h5))
     net.iperf(hosts=(h1,h20))
     
-    net.stop()
+    
 '''
 
 if __name__ == '__main__':
