@@ -1,7 +1,4 @@
 #!/usr/bin/python
-
-"CS244 Assignment 2: Buffer Sizing"
-
 from mininet.topo import Topo
 from mininet.node import CPULimitedHost
 from mininet.link import TCLink
@@ -134,10 +131,10 @@ class DCellTopo(Topo):
 
 
 
-def main():
+def main(ip="192.168.56.104", port=6653):
     topo = DCellTopo(n=args.n, levels=args.levels)
-    CONTROLLER_IP = "192.168.56.104"
-    CONTROLLER_PORT = 6653
+    CONTROLLER_IP = ip
+    CONTROLLER_PORT = port
     net = Mininet(topo=topo, host=CPULimitedHost, link=TCLink, controller=None)
     net.addController(
         'controller', controller=RemoteController,
