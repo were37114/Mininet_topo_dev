@@ -77,7 +77,7 @@ class Fattree(Topo):
     """
     Add Link
     """
-    def createLink(self, bw_c2a=0.2, bw_a2e=0.1, bw_h2a=0.5):
+    def createLink(self, bw_c2a=1000, bw_a2e=1000, bw_h2a=1000):
         logger.debug("Add link Core to Agg.")
         end = self.pod/2
         for x in xrange(0, self.iAggLayerSwitch, end):
@@ -139,7 +139,7 @@ def pingTest(net):
     net.pingAll()
 '''
 
-def createTopo(pod, density, ip="192.168.56.107", port=6633, bw_c2a=0.2, bw_a2e=0.1, bw_h2a=0.05):
+def createTopo(pod, density, ip="192.168.56.107", port=6633, bw_c2a=1000, bw_a2e=1000, bw_h2a=1000):
     logging.debug("LV1 Create Fattree")
     topo = Fattree(pod, density)
     topo.createTopo()
